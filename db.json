@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "id": "a3307f41-4da5-4277-8871-a8715a4ac51b",
+            "name": "gertrude",
+            "email": "jane@gmail.com",
+            "email_verified": true,
+            "password": "2345"
+        }
+    ],
+    "restaurants": [],
+    "categories": [],
+    "food_items": [],
+    "orders": [],
+    "otps": [
+        {
+            "id": "29ffb37f-5114-46d4-97df-75df9b5a69b4",
+            "user_id": "a3307f41-4da5-4277-8871-a8715a4ac51b",
+            "code": "520587"
+        }
+    ]
+}
