@@ -6,17 +6,45 @@
             "email": "jane@gmail.com",
             "email_verified": true,
             "password": "2345"
+        },
+        {
+            "id": "d37e85d4-afa7-42bd-9fb6-b644418ed715",
+            "name": "jane",
+            "email": "diogo@gmail.com",
+            "email_verified": true,
+            "password": "4567"
         }
     ],
-    "restaurants": [],
-    "categories": [],
-    "food_items": [],
-    "orders": [],
+    "restaurants": [
+        {
+            "restaurant": "erimeri"
+        }
+    ],
+    "categories": [
+        {
+            "category": "ice-cream"
+        }
+    ],
+    "food_items": [
+        {
+            "food_item": "strawberry icecream"
+        }
+    ],
+    "orders": [
+        {
+            "order": "strawberryicecream"
+        }
+    ],
     "otps": [
         {
             "id": "29ffb37f-5114-46d4-97df-75df9b5a69b4",
             "user_id": "a3307f41-4da5-4277-8871-a8715a4ac51b",
             "code": "520587"
+        },
+        {
+            "id": "8fc1e146-6d65-416a-9bdd-58dd5a648a5a",
+            "user_id": "d37e85d4-afa7-42bd-9fb6-b644418ed715",
+            "code": "678708"
         }
     ]
 }

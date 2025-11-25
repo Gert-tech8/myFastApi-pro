@@ -65,7 +65,7 @@ def verify_email(user_id: str, code: str):
     return {"message": "Email verified successfully"}
 
     
-    # fetch the token from the databae that matches the suer id and the code.
+    # fetch the token from the database that matches the user id and the code.
     #  if there is not match, return an error message to the user
     # else verify the user's email
    
@@ -89,5 +89,57 @@ def login_user(email: str, password: str):
     # if user not found, return error message
     # else check if the password matches
     # if password matches, return success message
+
+@app.post("/category")
+def category_food(category_name: str):
+    db = read_db()
+    categories = db.get("categories", [])
+
+    if any(c["category"] == category_name for c in categories):
+        return {"error": "Category already exists"}
+
+    new_category = {"category": category_name}
+    savecategory(new_category)
+    return {"message": "Category created successfully"}
+
+@app.post("/food_items")
+def food_item(food_item_name: str):
+    db = read_db()
+    food_items = db.get("food_items", [])
+
+    if any(f["food_item"] == food_item_name for f in food_items):
+        return {"error": "Food item already exists"}
+
+    new_food_item = {"food_item": food_item_name}
+    savefooditem(new_food_item)  # make sure function name matches your import
+    return {"message": "Food item created successfully"}
+
+
+
+@app.post("/restaurants")
+def restaurant(restaurant_name: str):
+    db = read_db()
+    restaurants = db.get("restaurants", [])
+
+    if any(r["restaurant"] == restaurant_name for r in restaurants):
+        return {"error": "Restaurant already exists"}
+
+    new_restaurant = {"restaurant": restaurant_name}
+    saverestaurant(new_restaurant)
+    return {"message": "Restaurant added successfully"}
+
+@app.post("/orders")
+def order_to_place(order_name: str):
+    db = read_db()
+    orders = db.get("orders", [])
+
+    if any(o["order"] == order_name for o in orders):
+        return {"error": "Order already taken"}
+
+    new_order = {"order": order_name}
+    saveorder(new_order)
+    return {"message": "Order successfully taken"}
+
+
     
 
